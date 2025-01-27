@@ -26,6 +26,13 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" 
+                            asp-controller="Informacion"
+                            asp-action="Index">
+                            Información
+                        </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -34,6 +41,9 @@
     <div class="container">
         <a asp-controller="Prueba" asp-action="PrimeraPagina">
             Mi primera página
+        </a>
+        <a asp-controller="Prueba" asp-action="Index">
+            Código Razor
         </a>
         <main role="main" class="pb-3">
             @RenderBody()
