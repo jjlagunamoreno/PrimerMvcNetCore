@@ -1,0 +1,16 @@
+﻿@*
+    Comentarios en razor
+*@
+DECLARACIÓN DE VARIABLES A NIVEL DE PÁGINA
+@{
+    //ESTO ES CÓDIGO C#
+    int valor = 14;
+    string texto = "hoy es lunes";
+    valor += 1;
+    texto += " y mañana martes";
+    texto = texto.ToUpper();
+}
+DIBUJAR VARIABLES
+<h2 style="color:red">
+    Texto: @texto, Número: @valor
+</h2>
