@@ -18,6 +18,31 @@ namespace PrimerMvcNetCore.Controllers
             return View();
         }
 
+        public IActionResult VistaControllerGet
+            (string saludo, System.Nullable<int> year)
+        {
+
+            if (saludo != null)
+            {
+                ViewData["DATA"] = "Hola " + saludo
+                + " en el año " + year;
+            } else
+            {
+                ViewData["DATA"] = "Aquí no hay nada...";
+            }
+
+            if (year != null)
+            {
+                ViewData["DATA"] = "Hola " + saludo
+                + " en el año " + year;
+            }
+            else
+            {
+                ViewData["DATA"] = "Aquí no tenemos año...";
+            }
+            return View();
+        }
+
         public IActionResult ControladorVistaModel()
         {
             Persona persona = new Persona();
@@ -25,6 +50,15 @@ namespace PrimerMvcNetCore.Controllers
             persona.Email = "alumno@email.com";
             persona.Edad = 27;
             return View(persona);
+        }
+
+        public IActionResult VistaControllerPost
+            (string cajanombre, string cajaemail, int cajaedad)
+        {
+            ViewData["DATA"] = "Nombre: " + cajanombre
+                + ", Email: " + cajaemail
+                + ", Edad: " + cajaedad;
+            return View();
         }
     }
 }
